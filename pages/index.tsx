@@ -1,14 +1,10 @@
-import React from 'react';
-import Header from './components/header';
+import React from "react";
+import Header from "./components/header";
 
 //Its a task page
 
 const index = () => {
-  return (
-    <div>
-      <Header />
-    </div>
-  )
-}
+  return <div>Index Page</div>;
+};
 
-export default index
+export default index;
