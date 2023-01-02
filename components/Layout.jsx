@@ -51,6 +51,7 @@ const Layout = ({ children }) => {
     sideProps = TaskSubpages;
     pageRoute = "/task";
     pageName = "Tasks";
+    hidden = true;
   } else if (path.startsWith("/")) {
     sideProps = MainSubpages;
     pageRoute = "";
