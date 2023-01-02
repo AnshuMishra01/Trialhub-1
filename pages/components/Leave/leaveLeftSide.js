@@ -8,7 +8,7 @@ const LeaveLeftSide = ({selected,setSelected}) => {
 return (
   
     <div className=''>
-       <div className='dropdown relative bg-black w-2/12 h-screen'>
+       <div className='dropdown relative bg-black w-full h-screen'>
        <div className='flex space-x-4 p-2 cursor-pointer bg-blue-500 dropdown_btn text-white flex' onClick={(e)=>setIsActive(!isActive)}>
         <span>{selected}</span> 
         <span className='relative top-1'><IoMdArrowDropdown/></span>
