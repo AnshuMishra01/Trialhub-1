@@ -1,10 +1,19 @@
+
+import React from "react";
+import Header from "./components/header";
+
 import Link from 'next/link';
 import React from 'react';
 import Header from './components/header';
 
+
 //Its a task page
 
 const index = () => {
+
+  return <div>Index Page</div>;
+};
+=======
   return (
     <div>
       <Header />
@@ -20,4 +29,5 @@ const index = () => {
   )
 }
 
-export default index
+
+export default index;
