@@ -15,7 +15,7 @@ function Header() {
           <h3 className="font-medium cursor-pointer link-underline">Attendance</h3>
           <h3 className="font-medium cursor-pointer link-underline">Task</h3>
           <h3 className="font-medium cursor-pointer link-underline"><Link href="meeting">Meeting</Link></h3>
-          <h3 className="font-medium cursor-pointer link-underline">Leave</h3>
+          <h3 className="font-medium cursor-pointer link-underline"><Link href="leave">Leave</Link></h3>
         </div>
         <div className="inline-flex space-x-3 cursor-pointer">
                          <NotifyIcon />
