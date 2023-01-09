@@ -4,8 +4,6 @@ import Image from 'next/image'
 const IntroCard = ({image,name,role,days}) => {
  
   return <>
-     {/* <div className='grid justify-center p-2 bg-red-100'><h1 className='font-bold'>MEMBERS ON LEAVE</h1> </div> */}
-
 
     <div className='flex flex-wrap bg-orange-100 space-x-1.5 m-auto justify-center p-1.5'>
       
@@ -16,13 +14,8 @@ const IntroCard = ({image,name,role,days}) => {
           <div className='font-semibold justify-center'>{name}</div>
           <small>{role}</small>
         </div>
-         <button className='bg-green-500 m-auto rounded-lg px-2'>{days} days</button>
-
-         
+         <button className='bg-green-500 m-auto rounded-lg px-2'>{days} days</button>        
       </div>
-
-      
-    
   </>
 }
 
