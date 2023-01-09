@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/components/sidebar.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/components/sidebar.tsx", "pages/components/Leave/leaveRightSidebar.js", "pages/components/Leave/leaveList.js", "pages/components/Leave/leaveLeftSide.js", "pages/components/Leave/leaveContent.js", "pages/components/Leave/introCard.js", "component/Leave/introCard.js", "component/Leave/leaveContent.js", "component/Leave/leaveRightSidebar.js", "component/Leave/leaveList.js", "component/Leave/leaveLeftSide.js"],
   "exclude": ["node_modules"]
 }

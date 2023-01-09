@@ -1,11 +1,9 @@
 import React from 'react'
-import Header from './header'
+
 
 function Login() {
   return (
-    <div>
-      <Header />
-        <div className="container">
+    <div className="container">
 	<div className="screen">
 		<div className="screen__content">
 			<form className="login">
@@ -31,7 +29,6 @@ function Login() {
 		</div>		
 	</div>
 </div>
-    </div>
   )
 }
 

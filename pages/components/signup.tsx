@@ -1,10 +1,7 @@
 import React from 'react'
-import Header from './header'
 
 function signup() {
   return (
-    <div>
-      <Header />
     <div className="main text-center sign">  	
 		<input type="checkbox" id="chk" aria-hidden="true"/>
 
@@ -17,7 +14,6 @@ function signup() {
 					<button>Sign up</button>
 				</form>
 			</div>
-    </div>
     </div>
   )
 }
