@@ -1,7 +1,6 @@
 import React from 'react'
 import Cards from './Cards';
 import { useState,useEffect } from 'react';
-import "../pagination.css";
 
 const Pagination = ({API,numberOfPostsPerPage}) => {
 
@@ -12,7 +11,8 @@ let currentPagePost ;
 const postsPerPage =numberOfPostsPerPage;
 const [currentPosts,setCurrentPosts] =useState([]);
 
-
+// calling Api as per the props provided by App.js file
+// we can also take an object array as prop , if App.js is doing the api call thing.
 useEffect (() => {
   fetch(API)
   .then(response => response.json())
@@ -20,27 +20,15 @@ useEffect (() => {
     // console.log(response);
     totalPosts = response;
     setTotalPages(Math.ceil(totalPosts.length / postsPerPage ));
-
-
-
-    let lastIndex = (currentPage*postsPerPage) ;
- 
-    
-    let startIndex = lastIndex - postsPerPage;
-   
-
+    let lastIndex = (currentPage*postsPerPage) ;    
+    let startIndex = lastIndex - postsPerPage; 
     currentPagePost = totalPosts.slice(startIndex , lastIndex);
-
     setCurrentPosts(currentPagePost);
     
   }) },[currentPage] )
 
-  {console.log(currentPosts)}
-    
-    
-
+//funtion for nextPage
 const nextPage = () =>{
-
 let pageNum = (currentPage + 1) ;
 if(pageNum > totalPages){
    pageNum = (currentPage + 1) % totalPages ;
@@ -48,6 +36,7 @@ if(pageNum > totalPages){
 setCurrentPage(pageNum);
 }
 
+// function for prevPage
 const prevPage = () =>{
 let pageNum = (currentPage - 1) 
 // page 1 is base
@@ -57,25 +46,21 @@ if(pageNum <= 1){
 setCurrentPage(pageNum);
 }
 
-
-  return (
-    <div className = "pagination">
+return (
+<div className = "pagination">
 <div className="posts flex basis-3 space-x-8 space-y-10 flex-wrap justify-center items-center flex-row">
-  {/* change div.posts for positioning cards as desired*/}
 
+{/* change div.posts for positioning cards as desired*/}
+{/* we can also use grid */}
 {
-  
+  // cards for renderingthe details
   currentPosts.map((post) =>(
     <>
   <Cards title={post.title} url={post.url}/>
   </>
   ))
-  
 }
-  </div>
- 
-  
-
+</div>
 <br/>
       <div className="buttons flex justify-center items-center">
       
@@ -97,14 +82,3 @@ setCurrentPage(pageNum);
 }
 
 export default Pagination;
-
-{/*
-
-
-albumId: 1
-id:1
-thumbnailUrl: "https://via.placeholder.com/150/92c952"
-title:"accusamus beatae ad facilis cum similique qui sunt"
-url:"https://via.placeholder.com/600/92c952"
-
-*/}
