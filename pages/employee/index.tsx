@@ -1,8 +1,14 @@
+import { useRouter } from "next/router";
 import React from "react";
 import FilterIcon from "../components/icons/filterIcon";
 import GridIcon from "../components/icons/gridIcon";
 
 function employee() {
+  const router=useRouter();
+
+  const addEmployeeButton=()=>{
+    router.push("/AddEmployee")
+  }
   return (
     <div>
       <div id="heading">
@@ -18,7 +24,7 @@ function employee() {
 
             <FilterIcon />
             <GridIcon />
-            <button className="border-2 px-4 py-0.4 hover:border-t-4 rounded-2xl">
+            <button className="border-2 px-4 py-0.4 hover:border-t-4 rounded-2xl" onClick={addEmployeeButton}>
               Add
             </button>
           </div>
